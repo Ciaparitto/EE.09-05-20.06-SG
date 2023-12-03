@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <div id="lewy1" >
+        <h2><a href="index.html">SALON FRYZJERSKI</a></h2>
+        <img src="obraz2.jpg" alt="Czesanie">
+    </div>
+    <div id="prawy1">
+        <h2>MENU</h2>
+    </div>
+    <div id="prawy2">
+        <ul>
+            <li><a href="fryzura.html">Strzyzenie</a>
+            <ol>
+                <li>srednie</li>
+                <li>poldlugie</li>
+                <li>dlugie</li>
+            </ol>
+            </li>
+            <li>Czesanie</li>
+            <li>koloryzacja</li>
+        </ul>
+    </div>
+    <div id="lewy2" >
+        <h3>Dziś promocja na strzyżenie włosów</h3>
+        <p><input type="radio" name="krotkie" id="krotkie" ><label for="krotkie" >krotkie</label></p>
+        <p><input type="radio" name="srednie" id="srednie"><label for="srednie">srednie</label></p>
+        <p><input type="radio" name="poldlugie" id="poldlugie"><label for="poldlugie">poldlugie</label></p>
+        <p><input type="radio" name="dlugie" id="dlugie"><label for="dlugie">dlugie</label></p>
+        <p></p> <button onclick="wyswietlcene()">odkryj promocje</button>
+        <p id="cena"></p>
+     </div>
+    <div id="prawy3">
+        <img src="obraz1.jpg" alt="Fryzjer">
+    </div>
+    <footer><p>Autor:000000000</p></footer>
+</body>
+<script>
+    function wyswietlcene()
+    {
+        var cena = 0;
+        if(document.getElementById("krotkie").checked) cena = 25;
+        if(document.getElementById("srednie").checked) cena = 30;
+        if(document.getElementById("poldlugie").checked) cena = 40;
+        if(document.getElementById("dlugie").checked) cena = 50;
+        document.getElementById("cena").innerHTML = "Cena strzyżenia:"+cena+"zl";
+    }
+</script>
+</html>
